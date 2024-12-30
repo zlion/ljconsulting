@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LJC Associate</title>
+  <meta name="author" content="Velile Vamba">
+  <meta content="" name="lorem100">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	<style type="text/css">
+		.carousel-item {
+		  height: 60vh;
+		  min-height: 350px;
+		  background: no-repeat center center scroll;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+
+    .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.main .container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+ 
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(32, 57, 84));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%);
+
+  transition: transform .6s 1s;
+}
+
+.main .container::before,
+.main .container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .6;
+  transition: .3s;
+}
+
+.main .container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.main .container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.main .container--active {
+  transition: none;
+}
+
+.main .container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+}
+
+.main .container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+}
+
+.main .container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.main .wrap:hover .container::before,
+.main .wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+.main .abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%);
+  font-size: 1.6rem;
+} 
+
+/*****************************************/
+.solutions {
+  /* The image used */
+  /* background-image: url(assets/img/dark-blue.jpg); */
+  background: linear-gradient(rgba(1, 41, 42, 0.5), rgba(7, 56, 57, 0.5)), url("assets/img/blue-background.jpg") fixed center center;
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.solutions .wrapper{
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.solutions h1{
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+}
+
+.solutions .panels{
+  list-style-type: none;
+  padding: 0;
+}
+
+.solutions .panels li{
+
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+
+.solutions .panels li div{
+  padding: 10% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  height: 50vh;
+}
+
+/*// ANIMATION STYLES //*/
+
+.solutions .panels div.back {
+  transform: rotateY(90deg);
+}
+
+.solutions .panels div.front {
+  position: absolute;
+}
+
+.solutions .panels li:hover div.front {
+  animation: twirl 0.2s ease-in forwards;
+}
+.solutions .panels li:hover div.back {
+  animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes twirl {
+  0%{ transform: rotateY(0deg)}
+  100% {transform: rotateY(90deg)}
+}
+
+.why-us {
+  /* The image used */
+  background-image: url(assets/img/slider-2.jpg);
+
+  /* Set a specific height */
+  min-height: 350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+	</style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        
+        <!-- <h1 class="text-light"><a href="index.html"><span>LJC Associate</span></a></h1> -->
+        <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#faq">Case Studies</a></li>
+		      <li><a href="#contact">Contact Us</a></li>
+        </ul>
+            
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url(assets/img/map.png)">
+          <div class="carousel-caption">
+            <h2 class="display-4">LJC</h2>
+            <p class="lead">Planning the academic path and extracurricular activities throughout high school</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url(assets/img/essay_editing.png)">
+          <div class="carousel-caption ">
+            <h2 class="display-4">LJC</h2>
+            <p class="lead">Writing high-quality essays for applications and scholarships</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url(assets/img/graduation.png)">
+          <div class="carousel-caption covid-block">
+            <h2 class="display-4">We are in this together.</h2>
+            <!-- <p class="lead" style="background: rgba(0, 0, 0, 0.7); border-radius: 3px;">Our Organisation is committed.</p> -->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </section><!-- #hero -->
+  
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row">
+          <!-- <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/Fapas.png" class="img-fluid" alt="">
+          </div> -->
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <h3>What we do</h3>
+            <p class="">
+              Experts in college admissions dedicated to guiding high school students through the application process and helping them gain acceptance to their target universities.
+            </p>
+            <p>
+              Our company specializes in step-by-step high school planning, mentoring research projects, and guiding students through application essays and scholarship submissions. We provide tailored solutions designed to support students aiming for top universities, leveraging our insights and expertise.
+            </p>
+            <p>
+              As a guiding principle, our goal is not to dominate our industry but to excel in the specific niche we serve.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <!-- <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Our services include:
+  			<span>Essay writing</span>,
+  			<span>Application reviews</span>,
+  			<span>Scholarship guidance</span>, and
+  			<span>Interview preparation</span>.</p>
+        </div>
+
+      </div>
+    </section>End Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section class="call-to-action">
+      <div class="container">
+        
+        <div class="text-center">
+          
+        <div class="section-title">
+          <h2 style="color: #fff;">Packages</h2>
+        </div>
+
+        <p>Our service packages are tailored to meet common requirements and include a range of essential services.</p>
+
+			<div class="container-fluid">
+			  <div class="col-md-12">
+			      <div class="row main">
+			            <div class="wrap wrap--3 col-md-3">
+			              <h6 style="color: #fff; text-align: right;">SENIOR SPOTLIGHT PACKAGE </h6>
+			              <div class="container container--3 ">
+			              	<ul>
+			              		<li><p>Emphasizes essay work over list-crafting</p></li>
+								<li><p>Keeping track of deadlines and essay prompts</p></li>
+								<li><p>Editing and advising for all written application material</p></li>
+								<li><p>Final review of all application materials</p></li>
+							</ul>
+			              </div>
+			            </div>
+			          
+			            <div class="wrap wrap--3  col-md-3">
+			              <h6 style="color: #fff; text-align: right;">RISING SENIOR PREMIUM PACKAGE</h6>
+			              <div class="container container--3 ">
+			              	<ul>
+			              		<li><p>Essay editing</p></li>
+								<li><p>Summer enrichment programs</p></li>
+								<li><p>Scholarship</p></li>
+							</ul>
+			              </div>
+			            </div>
+			          
+			            <div class="wrap wrap--3 col-md-3">
+			              <h6 style="color: #fff; text-align: right;">FRESHMEN PLUS PACKAGE</h6>
+			              <div class="container container--3 ">
+			                  <ul>
+							  	<li><p>Summer enrichment programs</p></li>
+								<li><p>Personalized advice on high school course selection and extracurricular involvement</p></li>
+								<li><p>Recommendations for standardized test selection, timing, preparation and submission</p></li>
+								<li><p>Essay editing</p></li>
+							  </ul>
+			              </div>
+			            </div>
+			          
+			            <div class="wrap wrap--3 col-md-3">
+			              <h6 style="color: #fff; text-align: right;">RESEARCH PACKAGE</h6>
+			              <div class="container container--3 ">
+			                  <ul>
+							  	<li><p>Brainstorm and supervision on selecting a research project.</p></li>
+								<li><p>Editing a research report or manuscript.</p></li>
+							  </ul>
+			  
+			              </div>
+			            </div>
+			          
+			            <div class="wrap wrap--3 col-md-3">
+			              <h6 style="color: #fff; text-align: right;">PAY-AS-GO PACKAGE</h6>
+			              <div class="container container--3 ">
+							  	<p>All listed services are billed on an hourly basis.</p> 
+			              </div>
+			            </div>
+			          
+			      </div>
+			  </div>
+			</div>
+        </div>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+
+    <section id="faq" class="solutions">
+      <div class="wrapper">
+        <div class="text-center" style="color: #fff"><h2 >Case Studies</h2></div>
+        <ul class="panels">
+          <div class="row">
+          <li class="col-md-4">
+            <div class="front" style="background: #203954">
+              <h6>Student A</h6>
+              <p>
+                A student with a strong GPA and SAT score, interested in data science, actively participated in school club activities. He met with us weekly for the past six months to work on his essays. 
+              </p>
+            </div>
+            <div class="back" style="background: #020a20">
+              <h6>Result</h6>
+            <p>
+              As a result, he was admitted to Northwestern University.
+            </p>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="front" style="background: #203954">
+              <h6>Student B</h6>
+              <p>
+                A student with a strong GPA and SAT score, interested in both engineering and business, actively participated in science fair events after school. We coached him for science fair competitions for a year and met with him weekly over the past six months to refine his essays. 
+              </p>
+            </div>
+            <div class="back" style="background: #020a20">
+              <h6>Result</h6>
+              <p>
+                As a result, he was admitted to the University of Pennsylvania.
+              </p>
+            </div>
+          </li>
+          <li  class="col-md-4">
+            <div class="front" style="background: #203954">
+              <h6>Challenge</h6>
+              <p>
+                A team of high school students participated in the prestigious Conrad Challenge, an international science fair event. We coached the team for six months, assisting with selecting research topics, developing prototypes, conducting experiments, writing reports, and rehearsing presentations.
+              </p>
+            </div>
+            <div class="back" style="background: #020a20">
+            <h6>Result</h6>
+              <p>As a result, the team won the Pete Scholarship, the highest award.</p>
+          </div>
+          </li>
+         
+        </div>
+        
+         
+        </ul>
+      </div>
+    </section>
+<!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+              <h3>LJC</h3>
+              <p>Delivering relevant services for our times</p>
+              <div class="social-links">
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <div>
+                <i class="icofont-google-map"></i>
+                <p>Naperville, IL, 60540</p>
+              </div>
+
+              <div>
+                <i class="icofont-envelope"></i>
+                <p>liangjunconsulting@gmail.com </p>
+              </div>
+
+              <div>
+                <i class="icofont-calendar"></i>
+                <p><a href="https://calendly.com/liangjunconsulting" target="_blank"> Book a time</a></p>
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Us Section -->
+   
+    <!-- ======= Map Section ======= -->
+    <!-- <section class="map">
+<iframe src="https://maps.google.com/maps?q=Naperville, IL,%60540&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>	</section><!-- End Map Section -->
+
+  </main><!--End #main-->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>LJC</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
